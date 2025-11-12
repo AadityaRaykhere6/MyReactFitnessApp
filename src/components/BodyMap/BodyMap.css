@@ -1,0 +1,190 @@
+.body-map-container {
+    min-height: 100vh;
+    padding: 60px 20px;
+    background: #0f172a;
+    color: white;
+}
+
+.body-map-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.body-map-header h2 {
+    font-size: 48px;
+    font-family: 'BrandonTextWeb-Bold', sans-serif;
+    margin-bottom: 16px;
+    background: linear-gradient(115deg, #51a5e1, #7f51e1);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.body-map-header p {
+    font-size: 20px;
+    color: #94a3b8;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.body-map-content {
+    display: flex;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: flex-start;
+}
+
+.body-figure {
+    flex: 1;
+    background: #1e293b;
+    border-radius: 20px;
+    padding: 40px;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.human-body-svg {
+    width: 100%;
+    max-width: 350px;
+    height: 500px;
+}
+
+.body-outline {
+    fill: #374151;
+    stroke: #4B5563;
+    stroke-width: 2;
+}
+
+.muscle-path {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    opacity: 0.7;
+}
+
+.muscle-path:hover {
+    opacity: 0.9;
+    transform: scale(1.05);
+}
+
+.muscle-path.active {
+    opacity: 1;
+    filter: drop-shadow(0 0 10px rgba(81, 165, 225, 0.8));
+}
+
+.view-toggle-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #7f51e1;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.view-toggle-btn:hover {
+    background: #6b3fd3;
+    transform: scale(1.05);
+}
+
+.exercises-panel {
+    flex: 1;
+    background: #1e293b;
+    border-radius: 20px;
+    padding: 30px;
+}
+
+.exercises-header h3 {
+    font-size: 32px;
+    margin-bottom: 8px;
+    color: white;
+}
+
+.exercises-header p {
+    color: #94a3b8;
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+
+.exercises-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-height: 400px;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+.exercise-card {
+    background: #334155;
+    border-radius: 12px;
+    padding: 20px;
+    transition: all 0.3s ease;
+    border: 1px solid #475569;
+}
+
+.exercise-card:hover {
+    transform: translateY(-2px);
+    border-color: #7f51e1;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.exercise-card h4 {
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: white;
+}
+
+.exercise-meta {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.meta-tag {
+    background: #475569;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    color: #e2e8f0;
+}
+
+.exercise-card p {
+    color: #94a3b8;
+    font-size: 14px;
+    line-height: 1.4;
+    margin-bottom: 10px;
+}
+
+.view-exercise-btn {
+    background: #7f51e1;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 16px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.view-exercise-btn:hover {
+    background: #6b3fd3;
+}
+
+@media (max-width: 968px) {
+    .body-map-content {
+        flex-direction: column;
+    }
+    
+    .body-figure {
+        min-height: 400px;
+    }
+}

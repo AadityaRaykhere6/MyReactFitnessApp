@@ -1,0 +1,41 @@
+.add-class-form {
+  background: #2a2d38;
+  padding: 30px;
+  border-radius: 10px;
+  margin-bottom: 50px;
+  text-align: left;
+}
+.add-class-form h2 {
+  margin-top: 0;
+  text-align: center;
+}
+.form-group {
+  margin-bottom: 15px;
+}
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #cacaca;
+}
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #555;
+  background: #1B1E26;
+  color: white;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+.form-button {
+  width: 100%;
+  padding: 12px;
+  background: #FF3278;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+}

@@ -1,0 +1,173 @@
+.ai-coach-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  color: white;
+  padding-top: 70px;
+}
+
+/* Hero Section */
+.ai-coach-hero {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.ai-coach-hero-content {
+  max-width: 600px;
+}
+
+.hero-icon {
+  font-size: 4rem;
+  margin-bottom: 2rem;
+  display: inline-block;
+}
+
+.ai-coach-hero-content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.ai-coach-hero-content p {
+  font-size: 1.2rem;
+  color: #94a3b8;
+  margin-bottom: 3rem;
+  line-height: 1.6;
+}
+
+/* Try Now Button */
+.try-now-button {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 15px 40px;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+}
+
+.try-now-button:hover {
+  box-shadow: 0 12px 30px rgba(102, 126, 234, 0.4);
+}
+
+/* Features Section */
+.ai-coach-features {
+  padding: 80px 20px;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.ai-coach-features .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.ai-coach-features h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 4rem;
+  color: white;
+  font-weight: 600;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.feature-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+  border-color: rgba(102, 126, 234, 0.3);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.feature-icon {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  display: inline-block;
+}
+
+.feature-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: white;
+  font-weight: 600;
+}
+
+.feature-card p {
+  color: #94a3b8;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+/* Back Button */
+.back-button {
+  position: fixed;
+  top: 100px;
+  left: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+}
+
+.back-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .ai-coach-hero-content h1 {
+    font-size: 2.2rem;
+  }
+  
+  .ai-coach-hero-content p {
+    font-size: 1.1rem;
+  }
+  
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .ai-coach-features h2 {
+    font-size: 2rem;
+  }
+  
+  .try-now-button {
+    padding: 12px 30px;
+    font-size: 1rem;
+  }
+  
+  .back-button {
+    top: 80px;
+    left: 15px;
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,79 @@
+.join-cult-section {
+    padding: 100px 0;
+    text-align: center;
+    color: white;
+}
+
+.join-cult-section h1 {
+    font-size: 70px;
+    font-family: 'BrandonTextWeb-Bold', sans-serif;
+    margin-bottom: 60px;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 2%;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.join-card {
+    flex-basis: 49%;
+    border-radius: 30px;
+    padding: 30px;
+    text-decoration: none;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 450px;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease;
+}
+
+.join-card:hover {
+    transform: scale(1.02);
+}
+
+.career-card {
+    background-image: url('https://cdn-images.cure.fit/www-curefit-com/image/upload/w_1000,q_auto:good,f_auto,dpr_2,fl_progressive//image/test/join-the-cult/career-at-cult.png');
+}
+
+.franchise-card {
+    background-image: url('https://cdn-images.cure.fit/www-curefit-com/image/upload/w_1000,q_auto:good,f_auto,dpr_2,fl_progressive//image/test/join-the-cult/cult-for-business.png');
+}
+
+.join-card h3 {
+    font-size: 40px;
+    font-family: 'BrandonTextWeb-Bold', sans-serif;
+    line-height: 1.2;
+}
+
+.franchise-card h3 {
+    background-image: linear-gradient(115deg, #f8ba00 12%, #ef5fa7 80%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.career-card img {
+    width: 80%;
+    align-self: center;
+}
+
+.join-card h5 {
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.btn-tertiary {
+    background: transparent;
+    color: #3888FF;
+    border: none;
+    padding: 7px 15px;
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+    margin: 20px auto 0 auto;
+}

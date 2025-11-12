@@ -1,0 +1,38 @@
+/* src/App.css */
+
+.App {
+  background-color: #0b101b; /* roadmap.sh ka background */
+  color: #ffffff;
+}
+
+.hero-and-cards-container {
+  position: relative; 
+}
+
+.main-content {
+  background-color: #0b101b; 
+}
+
+.one-membership-section {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 150px 20px 50px 20px;
+    color: white;
+}
+
+.one-membership-section .sub-heading {
+    font-size: 30px;
+    color: #a0aec0; /* Lighter gray for text */
+    margin: 0;
+}
+
+.one-membership-section h1 {
+    font-size: 70px;
+    font-family: 'BrandonTextWeb-Bold', sans-serif;
+    line-height: 1.2;
+    max-width: 900px;
+    margin: 10px auto;
+}

@@ -1,0 +1,325 @@
+.workout-cards-section {
+    width: 85%;
+    margin: 40px auto 0 auto; 
+    position: relative;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    gap: 3%;
+    padding: 20px 0;
+}
+
+.card {
+    flex-basis: 30%;
+    border-radius: 20px;
+    padding: 35px 30px;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    /* 🎯 PERFECTLY SMOOTH TRANSITION */
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    backdrop-filter: blur(10px);
+    border: 1px solid transparent;
+    background: linear-gradient(145deg, 
+        rgba(17, 23, 41, 0.9) 0%, 
+        rgba(26, 32, 44, 0.8) 100%);
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: inherit;
+    border-radius: 20px;
+    z-index: -1;
+}
+
+.card::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, 
+        rgba(127, 81, 225, 0.3), 
+        rgba(159, 122, 234, 0.2), 
+        rgba(127, 81, 225, 0.3));
+    border-radius: 22px;
+    z-index: -2;
+    opacity: 0;
+    /* 🎯 SMOOTH OPACITY TRANSITION */
+    transition: opacity 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.card:hover::after {
+    opacity: 1;
+}
+
+.card a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    z-index: 2;
+}
+
+/* Icon Styling - SMOOTH */
+.card-icon {
+    font-size: 4rem;
+    margin-bottom: 25px;
+    /* 🎯 SMOOTH TRANSITION */
+    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: relative;
+    background: linear-gradient(135deg, #7f51e1, #9f7aea);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: drop-shadow(0 0 20px rgba(127, 81, 225, 0.3));
+}
+
+.card:hover .card-icon {
+    transform: translateY(-8px) scale(1.15);
+    filter: drop-shadow(0 0 30px rgba(127, 81, 225, 0.5));
+}
+
+/* Level Text Styling */
+.card-level-text {
+    font-size: 1rem;
+    font-weight: 700;
+    color: rgba(255,255,255,0.8);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+    position: relative;
+    display: inline-block;
+    /* 🎯 SMOOTH TRANSITION */
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.card-level-text::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #7f51e1, transparent);
+    border-radius: 1px;
+}
+
+/* Title Text Styling */
+.card-title-text {
+    font-size: 2.4rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #ffffff 0%, #e2e8f0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 25px;
+    line-height: 1.2;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    /* 🎯 SMOOTH TRANSITION */
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Description Text Styling */
+.card-description {
+    font-size: 1.1rem;
+    color: rgba(255,255,255,0.7);
+    line-height: 1.7;
+    margin: 0;
+    flex-grow: 1;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    /* 🎯 SMOOTH TRANSITION */
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* 🎯 SMOOTH Hover Effect Enhancements */
+.card:hover {
+    transform: translateY(-12px) scale(1.05);
+    box-shadow: 
+        0 20px 40px rgba(0, 0, 0, 0.5),
+        0 0 80px rgba(127, 81, 225, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+/* Individual Card Hover Colors - SMOOTH */
+.card:nth-child(1):hover {
+    background: linear-gradient(135deg, 
+        rgba(16, 185, 129, 0.9) 0%, 
+        rgba(5, 150, 105, 0.8) 100%) !important;
+}
+
+.card:nth-child(2):hover {
+    background: linear-gradient(135deg, 
+        rgba(245, 158, 11, 0.9) 0%, 
+        rgba(217, 119, 6, 0.8) 100%) !important;
+}
+
+.card:nth-child(3):hover {
+    background: linear-gradient(135deg, 
+        rgba(239, 68, 68, 0.9) 0%, 
+        rgba(220, 38, 38, 0.8) 100%) !important;
+}
+
+/* Floating Particles */
+.floating-particle {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    animation: float-particle 8s ease-in-out infinite;
+    z-index: 1;
+}
+
+.floating-particle:nth-child(1) { 
+    width: 6px; height: 6px; top: 10%; left: 15%; animation-delay: 0s; 
+}
+.floating-particle:nth-child(2) { 
+    width: 4px; height: 4px; top: 20%; right: 20%; animation-delay: 2s; 
+}
+.floating-particle:nth-child(3) { 
+    width: 8px; height: 8px; bottom: 15%; left: 25%; animation-delay: 4s; 
+}
+
+@keyframes float-particle {
+    0%, 100% { 
+        transform: translateY(0px) translateX(0px);
+        opacity: 0.7;
+    }
+    25% { 
+        transform: translateY(-20px) translateX(10px);
+        opacity: 1;
+    }
+    50% { 
+        transform: translateY(-10px) translateX(-10px);
+        opacity: 0.8;
+    }
+    75% { 
+        transform: translateY(10px) translateX(15px);
+        opacity: 0.9;
+    }
+}
+
+/* 🎯 SMOOTH Shine Effect */
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+        transparent, 
+        rgba(255, 255, 255, 0.15), 
+        transparent);
+    /* 🎯 SMOOTH TRANSITION */
+    transition: left 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    z-index: 1;
+}
+
+.card:hover::before {
+    left: 100%;
+}
+
+/* 🎯 SMOOTH Hover Arrow */
+.hover-arrow {
+    position: absolute;
+    bottom: 20px;
+    right: 25px;
+    font-size: 1.5rem;
+    color: rgba(255,255,255,0.6);
+    /* 🎯 SMOOTH TRANSITION */
+    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    opacity: 0;
+    transform: translateX(-10px);
+}
+
+.card:hover .hover-arrow {
+    opacity: 1;
+    transform: translateX(0px);
+    color: rgba(255,255,255,0.9);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .workout-cards-section {
+        width: 90%;
+        gap: 2.5%;
+    }
+    
+    .card {
+        padding: 30px 25px;
+    }
+    
+    .card-icon {
+        font-size: 3.5rem;
+    }
+    
+    .card-title-text {
+        font-size: 2.1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .workout-cards-section {
+        flex-direction: column;
+        align-items: center;
+        width: 95%;
+        gap: 25px;
+        margin: 30px auto 0 auto;
+    }
+    
+    .card {
+        flex-basis: 100%;
+        max-width: 400px;
+        padding: 30px 25px;
+    }
+    
+    .card-icon {
+        font-size: 3.2rem;
+    }
+    
+    .card-title-text {
+        font-size: 2rem;
+    }
+    
+    .card-description {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .workout-cards-section {
+        width: 100%;
+        padding: 0 15px;
+    }
+    
+    .card {
+        padding: 25px 20px;
+    }
+    
+    .card-icon {
+        font-size: 2.8rem;
+    }
+    
+    .card-title-text {
+        font-size: 1.8rem;
+    }
+    
+    .card-level-text {
+        font-size: 0.9rem;
+    }
+}

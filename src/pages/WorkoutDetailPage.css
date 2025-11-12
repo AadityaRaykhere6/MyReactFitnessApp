@@ -1,0 +1,98 @@
+.workout-detail-container {
+    width: 80%;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #1a202c;
+    border-radius: 12px;
+    color: white;
+    font-family: 'Poppins', sans-serif; /* Example font */
+}
+
+.workout-header {
+    text-align: center;
+    border-bottom: 1px solid #303747;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+.workout-header .fa-solid {
+    font-size: 4rem;
+    margin-bottom: 15px;
+}
+
+.workout-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.workout-header p {
+    font-size: 1.1rem;
+    color: #a0aec0;
+}
+
+.exercise-list h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.exercise-card {
+    background: #111729;
+    border: 1px solid #303747;
+    border-left: 5px solid; /* Dynamic color is applied inline */
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.exercise-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+/* ## YAHAN CLASS KA NAAM BADLA GAYA HAI ## */
+.exercise-video {
+    width: 150px; /* Width thodi badha di hai video ke liye */
+    height: 100px;
+    object-fit: cover;
+    border-radius: 6px;
+    background-color: #303747;
+}
+
+.exercise-info {
+    flex-grow: 1;
+}
+
+.exercise-card h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.5rem;
+}
+
+.exercise-details span {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #a0aec0;
+    margin-right: 20px;
+    margin-left: 0;
+    background: #303747;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 30px;
+    color: #7f51e1;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}

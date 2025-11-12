@@ -1,0 +1,241 @@
+footer {
+    background-color: #0b101b;
+    padding: 80px 80px 40px 80px;
+    border-top: 1px solid #303747;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Subtle background pattern */
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 20% 80%, rgba(127, 81, 225, 0.03) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(127, 81, 225, 0.03) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #303747;
+    position: relative;
+    z-index: 1;
+}
+
+.footer-col {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.footer-col.about-us {
+    flex-basis: 30%;
+}
+
+.footer-col.about-us p {
+    color: #a0aec0;
+    font-size: 14px;
+    line-height: 1.6;
+    transition: color 0.3s ease;
+}
+
+.footer-col.about-us:hover p {
+    color: #cbd5e0;
+}
+
+.footer-col.links {
+    flex-basis: 15%;
+}
+
+/* Enhanced Link Hover Effect */
+.footer-col.links a {
+    color: #a0aec0;
+    text-decoration: none;
+    margin-bottom: 20px;
+    font-size: 14px;
+    position: relative;
+    padding-bottom: 5px;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.footer-col.links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(90deg, #7f51e1, white);
+    transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-col.links a:hover {
+    color: white;
+    transform: translateX(5px);
+}
+
+.footer-col.links a:hover::after {
+    width: 100%;
+}
+
+.footer-col.app-social {
+    align-items: flex-end;
+    flex-basis: 25%;
+}
+
+/* App Links with Cool Hover */
+.app-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.app-links a {
+    display: inline-block;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+}
+
+.app-links a img {
+    height: 50px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.app-links a:hover {
+    transform: translateY(-3px);
+}
+
+.app-links a:hover img {
+    box-shadow: 0 5px 20px rgba(127, 81, 225, 0.3);
+}
+
+/* Enhanced Social Icons */
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.social-links img {
+    width: 20px;
+    margin-left: 0;
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    background: rgba(127, 81, 225, 0.2);
+    border-color: #7f51e1;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(127, 81, 225, 0.3);
+}
+
+.social-links a:hover img {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* Logo with subtle animation */
+.logo-text {
+    font-size: 28px;
+    font-family: 'BrandonTextWeb-Bold', sans-serif;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.logo-text:hover {
+    transform: scale(1.02);
+}
+
+.logo-fit {
+    color: #7f51e1;
+    position: relative;
+}
+
+.logo-fit::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #7f51e1;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.logo-text:hover .logo-fit::after {
+    transform: scaleX(1);
+}
+
+.logo-india {
+    color: white;
+}
+
+/* Enhanced Copyright Section */
+.footer-bottom {
+    padding-top: 30px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.footer-bottom p {
+    color: #a0aec0;
+    font-size: 12px;
+    margin: 0;
+    transition: color 0.3s ease;
+}
+
+.footer-bottom:hover p {
+    color: #cbd5e0;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    footer {
+        padding: 60px 40px 30px 40px;
+    }
+    
+    .footer-col.about-us,
+    .footer-col.links,
+    .footer-col.app-social {
+        flex-basis: 100%;
+        margin-bottom: 30px;
+    }
+    
+    .footer-col.app-social {
+        align-items: flex-start;
+    }
+    
+    .social-links {
+        justify-content: flex-start;
+    }
+}
