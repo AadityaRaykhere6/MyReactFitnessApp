@@ -125,18 +125,64 @@
 /* Responsive design for smaller screens */
 @media (max-width: 768px) {
     .navbar {
-        padding: 0 20px;
+        padding: 0 15px;
     }
     
     .nav-center {
-        gap: 20px;
+        gap: 15px;
     }
     
     .nav-item a {
-        font-size: 14px;
+        font-size: 13px;
     }
     
     .logo-text {
-        font-size: 24px;
+        font-size: 22px;
+    }
+    .user-info {
+        gap: 8px; /* User info (Hi, Name) ke beech ka gap kam karein */
+    }
+}
+/*
+// src/components/Navbar/Navbar.css (file ke bottom mein add karein)
+*/
+
+/* --- Mobile Phone Extra Small Screen Fix (480px) --- */
+@media (max-width: 480px) {
+    .navbar {
+        padding: 0 10px; /* Sides se minimum padding */
+        height: 60px; /* Navbar ki height thodi kam karein */
+    }
+    
+    /* Center links (Workout, Diet, etc.) ko hide kar denge */
+    .nav-center {
+        display: none; 
+    }
+    
+    .logo-text {
+        font-size: 20px;
+    }
+    
+    /* User info section ko compact karein */
+    .user-info {
+        gap: 5px;
+    }
+    
+    /* "Hi, [Name]" text ko choti screen par hide kar dein */
+    .user-info span {
+        display: none; 
+    }
+    
+    /* Profile picture/initials ka size kam karein */
+    .profile-picture, .profile-initial {
+        width: 32px;
+        height: 32px;
+        font-size: 16px;
+    }
+
+    /* Logout button ki padding kam karein */
+    .logout-button {
+        padding: 6px 10px;
+        font-size: 12px;
     }
 }
